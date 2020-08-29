@@ -36,9 +36,60 @@
     margin-bottom: 5px;
     /*color: red;*/
 }
-.aboutMe .dt .hr2{
+.aboutMe .dt .hr2 {
     height: 2px;
     width: 25px;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+.process{
+    align-content: center;
+}
+.aboutMe h4{
+    color: #f6b31b;
+}
+.aboutMe .process ul{
+    padding-left: 2px;
+    list-style-type: none;
+}
+.aboutMe .process ul li{
+    padding:10px;
+    margin-top: 15px;
+    border: 1px solid #3b3b3b;
+    color: white;
+    margin-right: 40px;
+    /*border-width: 10px;*/
+}
+.aboutMe .detail{
+    background-color: #1c1c1c;
+}
+.detail .icon{
+    text-align: center;
+    font-size: 8px;
+    color: #f6b31b;
+    border: 2px solid #fef1d2;
+    background-color: #fef1d2;
+    border-radius: 50%;
+    margin-right: 8px;
+    /*border-color: #fef1d2;*/
+}
+.skill ul{
+    list-style-type: none;
+    margin-top: 25px;
+    padding-top: 15px;
+}
+.skill ul li{
+    color: #ffffff;
+    font-size: 25px;
+}
+.aboutMe .skill hr{
+    width: 80%;
+    color: red;
+    border-width: 6px;
+}
+@media (max-width: 576px) {
+    /*.menu ul{*/
+    /*    background-color: red;*/
+    /*}*/
+    *{}
 }
