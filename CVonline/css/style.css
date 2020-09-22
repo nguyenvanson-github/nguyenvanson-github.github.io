@@ -423,6 +423,67 @@ list-style-type: none;
     visibility: hidden;
     overflow-y: hidden;
 }
+.content-right .blog{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+.blog .blog_content{
+    height: 100%;
+    width: 100%;
+}
+.blog .blog_content .title4{
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #C9C9C9 ;
+    color: #00A3E1;
+}
+.blog_content .blog_icon{
+    font-size: 45px;
+    color: #00A3E1;
+}
+.blog .blog_content .blog_title{
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.blog_title .img{
+    position: absolute;
+    top: 0;
+}
+.blog_title .img img{
+    height: 90%;
+    width: 75%;
+    transition: 0.5s;
+}
+.blog_title .img img:hover{
+    height: 100%;
+    width: 80%;
+}
+.blog_title .info{
+    position: absolute;
+    left: 85px;
+    top:70%;
+    background-color: white;
+    z-index: 2;
+    text-align: center;
+}
+.blog_title .info a{
+    text-decoration: none;
+}
+.blog_title .info .blog_name{
+    font-size: 20px;
+}
+.blog_title .info .time{
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 300;
+}
 .content-right .contact{
     position: absolute;
     top: 0;
