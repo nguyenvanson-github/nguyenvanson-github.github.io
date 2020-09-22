@@ -22,27 +22,60 @@ html,body{
 .setting{
     position: fixed;
     top: 10%;
-    right: 1%;
+    right:6%;
     color: red;
+    height: 150px;
+    width: 130px;
     z-index: 100;
     font-size: 40px;
     background-color:#FFFFFF;
     border: 1px solid #b3b7bb;
-    transform: translateX(138px);
+    transform: translateX(223px);
 }
 .setting #cfg{
     transition: 1s;
-    transform: rotate(360deg);
+    animation: xoayvong 2s linear 0s infinite;
     padding:5px 8px 5px 5px;
     margin-top: 0px;
-    transform: translateX(-38px);
-    background-color: #FFFFFF;
+    /*transform: translateX(-38px) !important;*/
     cursor: pointer;
+    z-index: 110;
 }
-.setting .select{
-    height: 90px;
-    width: 120px;
+.setting .cfg{
+    position: fixed;
+    top: 10%;
+    right: 100%;
+    background-color: #FFFFFF;
+    height: 60px;
+    width: 40px;
+    z-index: 100;
 }
+@-webkit-keyframes xoayvong{
+    from{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+/* Standard syntax */
+@keyframes xoayvong {
+    from{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+
 .setting .select h4{
     color: black;
     position: fixed;
@@ -100,11 +133,11 @@ html,body{
 }
 .move_out{
     transition: 1s;
-    transform: translateX(0px);
+    transform: translateX(100px);
 }
 .move_in{
     transition: 1s;
-    transform: translateX(138px);
+    transform: translateX(223px);
 }
 .menu_left img{
     /*margin-top: 50px;*/

@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CVonline/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/CVonline/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CVonline/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CVonline/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CVonline/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/CVonline/javascript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,9 @@
       <workItem from="1598718616377" duration="4858000" />
       <workItem from="1598757590994" duration="6009000" />
       <workItem from="1600753389324" duration="10912000" />
-      <workItem from="1600785493257" duration="8543000" />
+      <workItem from="1600785493257" duration="9165000" />
+      <workItem from="1600796882655" duration="195000" />
+      <workItem from="1600800361097" duration="4269000" />
     </task>
     <servers />
   </component>
