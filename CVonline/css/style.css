@@ -433,3 +433,8 @@ list-style-type: none;
     visibility: hidden;
     overflow-y: hidden;
 }
+.fb-comments {
+    height: 500px;
+    width: 500px;
+    border: 1px solid red;
+}
