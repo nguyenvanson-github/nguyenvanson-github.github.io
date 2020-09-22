@@ -100,6 +100,7 @@ button{
     visibility: hidden;
     overflow-y: hidden;
 }
+
 .content-right .home h1{
     text-align: center;
     padding-top: 300px;
@@ -410,4 +411,29 @@ list-style-type: none;
     to{
         transform: translateX(400px);
     }
+}
+
+.content-right .portfolio{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+.content-right .contact{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+.commentfb{
+    height: 100px;
+    width: 100px;
 }
