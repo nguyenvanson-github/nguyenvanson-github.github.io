@@ -4,8 +4,37 @@ var page=document.querySelectorAll('.page');
 var cmt=document.querySelectorAll('.cmt');
 var arrange=document.querySelectorAll('.arrange');
 var blue=document.querySelectorAll('.row_blue');
+var cfg=document.getElementById('cfg');
+var setting=document.querySelectorAll('.setting');
+var color=document.querySelectorAll('.color');
+var element_change=document.querySelectorAll('.color_change');
 var index=0;
 var k=0;
+var n=0;
+    cfg.onclick=function (){
+        n++;
+        if(n%2==0) {
+            setting[0].classList.remove('move_out');
+            setting[0].classList.add('move_in');
+        }else {
+            setting[0].classList.add('move_out');
+            setting[0].classList.remove('move_in');
+        }
+    }
+    for (var c=0;c<color.length;c++){
+        color[c].onclick=function () {
+            var change_color = this.getAttribute('data-color');
+            for (var e=0;e<element_change.length;e++) {
+                element_change[e].classList.remove('change_blue');
+                element_change[e].classList.remove('change_red');
+                element_change[e].classList.remove('change_green');
+                element_change[e].classList.remove('change_yellow');
+                element_change[e].classList.remove('change_pink');
+                element_change[e].classList.remove('change_violet');
+                element_change[e].classList.add(change_color);
+            }
+        }
+    }
     for(var i=0;i<btn.length;i++){
         btn[i].onclick=function (){
             for (var m=0;m<btn.length;m++){

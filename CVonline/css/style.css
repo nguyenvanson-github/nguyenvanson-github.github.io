@@ -19,12 +19,108 @@ html,body{
     top: 0;
     left: 0;
 }
+.setting{
+    position: fixed;
+    top: 10%;
+    right: 1%;
+    color: red;
+    z-index: 100;
+    font-size: 40px;
+    background-color:#FFFFFF;
+    border: 1px solid #b3b7bb;
+    transform: translateX(138px);
+}
+.setting #cfg{
+    transition: 1s;
+    transform: rotate(360deg);
+    padding:5px 8px 5px 5px;
+    margin-top: 0px;
+    transform: translateX(-38px);
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.setting .select{
+    height: 90px;
+    width: 120px;
+}
+.setting .select h4{
+    color: black;
+    position: fixed;
+    top:5%;
+    left: 25%;
+}
+.setting .select .color{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.setting .select .blue{
+    background-color:#00A3E1;
+    cursor: pointer;
+}
+.setting .select .red{
+    background-color: #E82A2A;
+    cursor: pointer;
+}
+.setting .select .green{
+    background-color: #6AC045;
+    cursor: pointer;
+}
+.setting .select .yellow{
+    background-color: #D1A71D;
+    cursor: pointer;
+}
+.setting .select .pink{
+    background-color: #FF1493;
+    cursor: pointer;
+}
+.setting .select .violet{
+    background-color: #5078FF;
+    cursor: pointer;
+}
+.change_blue{
+    color:#00A3E1!important;
+}
+.change_red{
+    color:#E82A2A!important;
+}
+.change_green{
+    color:#6AC045!important;
+}
+.change_yellow{
+    color:#D1A71D!important;
+}
+.change_pink{
+    color:#FF1493!important;
+}
+.change_violet{
+    color:#5078FF!important;
+}
+.move_out{
+    transition: 1s;
+    transform: translateX(0px);
+}
+.move_in{
+    transition: 1s;
+    transform: translateX(138px);
+}
 .menu_left img{
     /*margin-top: 50px;*/
     width: 100%;
     height: 250px;
     margin-bottom:0px;
     padding-bottom: 10px;
+}
+.menu_left .name{
+    color: #00A3E1;
+    position: fixed;
+    top: 25%;
+    width: 250px;
+    height: 30px;
+    font-size: 28px;
+    font-weight: bold;
 }
 ul{
     margin: 0px;
@@ -108,7 +204,7 @@ button{
     font-size: 100px;
 }
 .content-right .home h1 .first_name{
-    color: white!important;
+    color: white;
 }
 .content-right .home .text_move{
     position: relative;
@@ -216,6 +312,9 @@ list-style-type: none;
     cursor: pointer;
     height: 130px;
     width: 110px;
+}
+.About_me_content .testimonials h2{
+    margin-bottom: 30px;
 }
 .About_me_content .testimonials{
     position: relative;
@@ -457,13 +556,12 @@ list-style-type: none;
     top: 0;
 }
 .blog_title .img img{
-    height: 90%;
-    width: 75%;
+    height: 100%;
+    width: 78%;
     transition: 0.5s;
 }
 .blog_title .img img:hover{
-    height: 100%;
-    width: 80%;
+    transform: scale(1.2);
 }
 .blog_title .info{
     position: absolute;
