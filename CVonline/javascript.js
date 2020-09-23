@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",function (){
-var btn=document.querySelectorAll('.btn');
+var btn=document.querySelectorAll('.btn1');
+var btn_select=document.querySelectorAll('.btn_select');
 var page=document.querySelectorAll('.page');
 var cmt=document.querySelectorAll('.cmt');
 var arrange=document.querySelectorAll('.arrange');
@@ -8,9 +9,30 @@ var cfg=document.getElementById('cfg');
 var setting=document.querySelectorAll('.setting');
 var color=document.querySelectorAll('.color');
 var element_change=document.querySelectorAll('.color_change');
+var group=document.querySelectorAll('.img_group');
+var xanh=document.querySelectorAll('.xanh');
 var index=0;
 var k=0;
 var n=0;
+console.log(color);
+console.log(btn_select);
+    for (var x=0;x<xanh.length;x++){
+        xanh[x].onclick=function (){
+
+        }
+    }
+    for(var b=0;b<btn_select.length;b++){
+        btn_select[b].onclick=function (){
+            for (var c=0;c<btn_select.length;c++){
+                btn_select[c].classList.remove('change_bg');
+                group[c].classList.remove('hienlen');
+            }
+            this.classList.add('change_bg');
+            var data=this.getAttribute('data-img');
+            var group_img=document.getElementById(data);
+            group_img.classList.add('hienlen');
+        }
+    }
     cfg.onclick=function (){
         n++;
         if(n%2==0) {
@@ -96,7 +118,7 @@ var n=0;
     // console.log()
     var tgain=setInterval(function (){
         for(var a=0;a<arrange.length;a++){
-            console.log(arrange[a]);
+            // console.log(arrange[a]);
             arrange[a].classList.add('move');
             blue[a].classList.add('go');
         }

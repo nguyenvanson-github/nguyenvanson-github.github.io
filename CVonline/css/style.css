@@ -166,8 +166,8 @@ ul{
     margin-top: 0px;
     margin-bottom:3px;
     border-bottom: 1px solid #202125;
-    padding-bottom: 30px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 ul li:hover .icon{
@@ -183,19 +183,16 @@ ul li .icon{
     left:20px;
     color: #999999;
 }
-button{
-    outline: none;
-    border: none;
-    /*background-color:#2A2B30 ;*/
-    color:red;
-    font-weight: 600;
-    font-size: 18px;
-    /*margin-bottom: 2px;*/
-    position: absolute;
-    left: 50px;
+.content ul span{
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
 }
-.btn{
+.btn1{
     color: #777777;
+}
+.btn1:focus{
+    outline-style: none;
 }
 .change_color{
     color: white!important;
@@ -553,7 +550,131 @@ list-style-type: none;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+.portfolio .buttons{
+    /*width: 10000px;*/
+    width: 500px;
+    height: 80px;
+    background-color: #d3d9df;
+    text-align: center;
+    margin: auto;
+}
+.portfolio .buttons ul{
+    list-style: none;
+    padding: 22px;
+}
+.portfolio .buttons li{
+    text-align:center;
+    cursor:pointer ;
+    width: 80px;
+    height: 25px;
+    /*background-color: #1c7430;*/
+}
+.anh{
+    position: relative;
+    height:390px;
+    width: 390px;
+}
+.anh .img1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+.anh .img1 img{
+    height: 100%!important;
+    width: 100%!important;
+}
+.black_bg{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #333333bf;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+.anh .xanh{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #00a3e173;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.anh .xanh .p1{
+    margin-top: 120px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+.anh .xanh .p2{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 25px;
+}
+.anh .xanh i{
+    margin-top: 90px;
+    margin-left: 85%;
+    font-size: 30px;
+}
+.anh:hover .img1{
+    opacity: 0.5;
+    /*visibility: hidden;*/
+}
+.anh:hover .xanh{
+    visibility: visible;
+    opacity: 0.8;
+    z-index: 4;
+    transition: 0.5s;
+}
+.change_bg{
+    background-color: yellow!important;
+}
+.portfolio .buttons li b{
+    margin-top: 15px;
+}
+.portfolio .buttons ul li{
+    /*float: left;*/
+    display: inline-block;
+}
+.portfolio .content_img{
+    width: 1000px;
+    margin: auto;
+    margin-top: 40px;
+    height: 100%;
+}
+.portfolio .content_img ul{
+    height: 100%;
+}
+.portfolio .content_img ul li{
+    height: 100%;
+}
+.portfolio .content_img .imgs{
+    height:40%;
+    width:40%;
+}
+.img_group{
+    opacity: 0;
+    visibility: hidden;
+}
+.hienlen{
+    opacity: 1!important;
+    visibility: visible!important;
+}
+.portfolio .content_img{
+    position: relative;
+}
+.content_img li{
+    position: absolute;
 }
 .content-right .blog{
     position: absolute;
@@ -623,11 +744,12 @@ list-style-type: none;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
     overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://4.bp.blogspot.com/-qTsIXSYIt0I/UbGqGm9RR_I/AAAAAAAAA6E/2zDTcQDSaW4/s1600/Thuthuatpro.info-h%C3%ACnh+n%E1%BB%81n+%C4%91%E1%BB%99ng6.gif");
 }
-.fb-comments {
-    height: 500px;
-    width: 500px;
-    border: 1px solid red;
-}
+/*.contact .bg_contact{*/
+/*    background-image: url("../images/1.png");*/
+/*}*/
