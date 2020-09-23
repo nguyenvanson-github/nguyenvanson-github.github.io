@@ -147,7 +147,7 @@ html,body{
     padding-bottom: 10px;
 }
 .menu_left .name{
-    color: #00A3E1;
+    color: red;
     position: fixed;
     top: 25%;
     width: 250px;
@@ -571,6 +571,9 @@ list-style-type: none;
     width: 80px;
     height: 25px;
     /*background-color: #1c7430;*/
+}
+.portfolio .buttons li b{
+    font-size: 18px;
 }
 .anh{
     position: relative;
