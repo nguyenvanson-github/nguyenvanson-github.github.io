@@ -110,7 +110,7 @@ html,body{
     cursor: pointer;
 }
 .setting .select .violet{
-    background-color: #5078FF;
+    background-color: violet;
     cursor: pointer;
 }
 .change_blue{
@@ -129,7 +129,7 @@ html,body{
     color:#FF1493!important;
 }
 .change_violet{
-    color:#5078FF!important;
+    color:violet!important;
 }
 .move_out{
     transition: 1s;
@@ -624,6 +624,7 @@ list-style-type: none;
     opacity: 0;
     visibility: hidden;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .fb-comments {
     height: 500px;
