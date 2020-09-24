@@ -11,6 +11,8 @@ var color=document.querySelectorAll('.color');
 var element_change=document.querySelectorAll('.color_change');
 var group=document.querySelectorAll('.img_group');
 var xanh=document.querySelectorAll('.xanh');
+var bg_black=document.getElementById('black_background');
+var tick=document.getElementById('tick');
 var index=0;
 var k=0;
 var n=0;
@@ -18,9 +20,19 @@ console.log(color);
 console.log(btn_select);
     for (var x=0;x<xanh.length;x++){
         xanh[x].onclick=function (){
+            bg_black.classList.add('bg_active');
+            var img_id=this.getAttribute('data-images');
 
+            console.log(img_id);
+            var images=document.getElementById(img_id);
+            images.classList.add('img_active');
+            tick.onclick=function (){
+                bg_black.classList.remove('bg_active');
+                images.classList.remove('img_active');
+            }
         }
     }
+
     for(var b=0;b<btn_select.length;b++){
         btn_select[b].onclick=function (){
             for (var c=0;c<btn_select.length;c++){

@@ -8,6 +8,7 @@ html,body{
     padding: 0px;
     position: relative;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .menu_left{
     margin: 0px;
@@ -26,7 +27,7 @@ html,body{
     color: red;
     height: 150px;
     width: 130px;
-    z-index: 100;
+    z-index: 30;
     font-size: 40px;
     background-color:#FFFFFF;
     border: 1px solid #b3b7bb;
@@ -550,7 +551,7 @@ list-style-type: none;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
     overflow-y: visible;
 }
 .portfolio .buttons{
@@ -574,6 +575,7 @@ list-style-type: none;
 }
 .portfolio .buttons li b{
     font-size: 18px;
+    border-radius: 50%;
 }
 .anh{
     position: relative;
@@ -592,16 +594,49 @@ list-style-type: none;
     height: 100%!important;
     width: 100%!important;
 }
-.black_bg{
+#black_background{
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: #333333bf;
-    top: 0px;
-    left: 0px;
-    z-index: 3;
+    background-color: #333333c7;
+    top: 0;
+    left: 0;
     opacity: 0;
     visibility: hidden;
+}
+#black_background .tick{
+    position:absolute ;
+    top: 1%;
+    left: 95%;
+    font-size: 20px;
+    color: #FFFFFF;
+    z-index: 38!important;
+    cursor: pointer;
+}
+#black_background .tick:hover{
+    background-color: red;
+}
+.bg_active{
+    z-index: 33!important;
+    opacity: 1!important;
+    visibility: visible!important;
+}
+
+
+.pop-up .images_pop_up img{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.img_active{
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 34!important;
+    opacity: 1!important;
+    visibility: visible!important;
 }
 .anh .xanh{
     position: absolute;
@@ -640,6 +675,9 @@ list-style-type: none;
     transition: 0.5s;
 }
 .change_bg{
+    height: 60px;
+    width: 60px;
+    border-radius: 45%;
     background-color: yellow!important;
 }
 .portfolio .buttons li b{
