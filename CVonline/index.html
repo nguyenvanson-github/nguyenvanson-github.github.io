@@ -61,6 +61,16 @@
             <div class="cfg">
                 <i class="fa fa-cog color_change" id="cfg" aria-hidden="true"></i>
             </div>
+            <h4 class="text-center mt-0 pt-0">Page animation</h4>
+            <select name="animation" id="select_ani" class="ani">
+                <option class="option">Chosse</option>
+                <option value="page_ani1" class="option" data-animation="page_ani1">1</option>
+                <option value="page_ani2" class="option" data-animation="page_ani2">2</option>
+                <option value="page_ani3" class="option" data-animation="page_ani3">3</option>
+                <option value="page_ani4" class="option" data-animation="page_ani4">4</option>
+                <option value="page_ani5" class="option" data-animation="page_ani5">5</option>
+                <option value="page_ani6" class="option" data-animation="page_ani6">6</option>
+            </select>
             <div class="select mt-5">
                 <h4 class="text-center mt-0 pt-0">Colors</h4>
                 <div class="color blue float-left" data-color="change_blue"></div>
@@ -72,7 +82,7 @@
             </div>
         </div>
         <div class="content-right pl-5 ml-5">
-            <div class="page home active" id="home">
+            <div class="page home active" page-number="1" id="home">
                 <h1>Nguyen Van <span class="first_name change_blue color_change">Son</span></h1>
                 <div class="introduce">
                     <span class="text-center pl-5 me mt-5 pt-5">I am</span>
@@ -83,7 +93,7 @@
                     </span>
                 </div>
             </div>
-            <div class="About_me page" id="About_me">
+            <div class="About_me page" page-number="2" id="About_me">
                 <div class="About_me_content">
                     <div class="about_me">
                         <div class="title1 text-center pt-5">
@@ -162,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="resume page" id="resume">
+            <div class="resume page" page-number="3" id="resume">
                 <div class="resume_content mt-2 p-3 ml-5 mr-5">
                     <div class="title3 text-center pt-5">
                         <h1 class="float-left color_change">My Resume.</h1>
@@ -306,7 +316,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio page" id="portfolio">
+            <div class="portfolio page" page-number="4" id="portfolio">
                 <div class="buttons mt-5">
                     <ul class="text-center mt-3">
                         <li class="btn_select change_bg color_change" data-img="img_group_1"><b>ALL</b></li>
@@ -585,7 +595,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="blog page" id="blog">
+            <div class="blog page" page-number="5" id="blog">
                 <div class="blog_content mt-2 p-3 ml-5 mr-5">
                     <div class="title4 text-center pt-5 mr-5 pr-5">
                         <h1 class="float-left color_change">My Blog</h1>
@@ -693,7 +703,7 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="contact page" id="contact">
+            <div class="contact page" page-number="6" id="contact">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="feedback text-center color_change">

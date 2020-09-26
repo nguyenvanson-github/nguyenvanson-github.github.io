@@ -13,11 +13,12 @@ var group=document.querySelectorAll('.img_group');
 var xanh=document.querySelectorAll('.xanh');
 var bg_black=document.getElementById('black_background');
 var tick=document.getElementById('tick');
+var select_ani=document.getElementById('select_ani');
 var index=0;
 var k=0;
 var n=0;
-console.log(color);
-console.log(btn_select);
+var home=document.getElementById('home');
+console.log(home.getAttribute('page-number'));
     for (var x=0;x<xanh.length;x++){
         xanh[x].onclick=function (){
             bg_black.classList.add('bg_active');
@@ -69,6 +70,8 @@ console.log(btn_select);
             }
         }
     }
+    var page_current_number=1;
+    var page_current=page[0];
     for(var i=0;i<btn.length;i++){
         btn[i].onclick=function (){
             for (var m=0;m<btn.length;m++){
@@ -77,10 +80,50 @@ console.log(btn_select);
             this.classList.add('change_color');
             var ds = this.getAttribute('data-ds');
             var page_active=document.getElementById(ds);
+            var page_active_number=parseInt(page_active.getAttribute('page-number'));
+            var ani=select_ani.value;
             for(var j=0;j<page.length;j++){
-                page[j].classList.remove('active');
+
+                page[j].classList.remove('page_ani1_left_in');
+                page[j].classList.remove('page_ani1_left_out');
+                page[j].classList.remove('page_ani1_right_in');
+                page[j].classList.remove('page_ani1_right_out');
+                page[j].classList.remove('page_ani2_left_in');
+                page[j].classList.remove('page_ani2_left_out');
+                page[j].classList.remove('page_ani2_right_in');
+                page[j].classList.remove('page_ani2_right_out');
+                page[j].classList.remove('page_ani3_left');
+                page[j].classList.remove('page_ani4_left');
+                page[j].classList.remove('page_ani5_left');
+                page[j].classList.remove('page_ani6_left');
+                page[j].classList.remove('page_ani1_right');
+                page[j].classList.remove('page_ani2_right');
+                page[j].classList.remove('page_ani3_right');
+                page[j].classList.remove('page_ani4_right');
+                page[j].classList.remove('page_ani5_right');
+                page[j].classList.remove('page_ani6_right');
             }
+            // console.log(typeof (page_active.getAttribute('page-number')));
             page_active.classList.add('active');
+            if(page_active_number>page_current_number){
+                // console.log("lon hon");
+                page_active.classList.add(ani+"_left_in");
+                page_current.classList.add(ani+"_left_out");
+                page_current.classList.remove('active');
+
+            }else if(page_active_number==page_current_number){
+                page_active.classList.add('active');
+            }
+            else if(page_active_number<page_current_number) {
+                page_active.classList.add(ani+"_right_in");
+                page_current.classList.add(ani+"_right_out");
+                page_current.classList.remove('active');
+            }
+            // page_active.classList.add(ani);
+            page_current=page_active;
+            page_current_number=parseInt(page_current.getAttribute('page-number'));
+            // console.log(typeof (page_number_current));
+
         }
     }
     function auto(){
