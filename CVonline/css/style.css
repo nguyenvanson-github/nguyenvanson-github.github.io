@@ -127,7 +127,7 @@ html,body{
     cursor: pointer;
 }
 .change_blue{
-    color:#00A3E1!important;
+    color:#5078FF!important;
 }
 .change_red{
     color:#E82A2A!important;
@@ -159,11 +159,17 @@ html,body{
     margin-bottom:0px;
     padding-bottom: 10px;
 }
-.menu_left .name{
-    color: red;
+.menu_left .bg_name{
     position: fixed;
-    top: 25%;
-    width: 250px;
+    top: 24%;
+    height: 45px;
+    width: 245px;
+    background-color: #A3E4D7;
+}
+.menu_left .name{
+    position: fixed;
+    top: 24%;
+    width: 245px;
     height: 30px;
     font-size: 28px;
     font-weight: bold;
@@ -327,7 +333,7 @@ ul li .icon{
 .content-right .About_me .About_me_content{
     width: 100%;
     position: relative;
-    z-index: 20;
+    z-index: 50;
 
 }
 .content-right .About_me .about_me{
@@ -366,6 +372,7 @@ list-style-type: none;
     border: 1px solid red;
     padding-top: 50px!important;
     margin-top: 30px!important;
+    z-index: 1;
 }
 .About_me_content .testimonials .cmt{
     height: 100%;
@@ -415,6 +422,7 @@ list-style-type: none;
     visibility: hidden;
     overflow-x: hidden;
     overflow-y: visible;
+    z-index: 50;
 }
 .resume .resume_content{
     height: 100%;
@@ -661,6 +669,8 @@ list-style-type: none;
     background-color: #00a3e173;
     transition: 0.5s;
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
 }
 .anh .xanh .p1{
     margin-top: 120px;
@@ -682,8 +692,8 @@ list-style-type: none;
     /*visibility: hidden;*/
 }
 .anh:hover .xanh{
-    visibility: visible;
-    opacity: 0.8;
+    visibility: visible!important;
+    opacity: 0.8!important;
     z-index: 4;
     transition: 0.5s;
 }
