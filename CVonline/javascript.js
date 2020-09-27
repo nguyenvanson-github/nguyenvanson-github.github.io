@@ -63,9 +63,12 @@ console.log(home.getAttribute('page-number'));
                 element_change[e].classList.remove('change_blue');
                 element_change[e].classList.remove('change_red');
                 element_change[e].classList.remove('change_green');
-                element_change[e].classList.remove('change_yellow');
+                element_change[e].classList.remove('change_yellow1');
                 element_change[e].classList.remove('change_pink');
                 element_change[e].classList.remove('change_violet');
+                element_change[e].classList.remove('change_yellow2');
+                element_change[e].classList.remove('change_brown');
+                element_change[e].classList.remove('change_orange');
                 element_change[e].classList.add(change_color);
             }
         }
