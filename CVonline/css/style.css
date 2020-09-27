@@ -245,6 +245,26 @@ ul li .icon{
     color: white;
     padding: 10px;
 }
+.social .face{
+    /*box-sizing: border-box;*/
+    padding:5px 9px 5px 9px;
+    background-color: #128FE9;
+    border-radius: 50%;
+}
+.social .twitter{
+    /*box-sizing: border-box;*/
+    color: #FFFFFF;
+    padding:4px;
+    background-color: #1C9CEA;
+}
+.social .youtobe{
+    color: red;
+    font-size: 28px;
+}
+.social .envelope{
+    color: #CF4337;
+    font-size: 25px;
+}
 .menu_left .text{
     color: #777777;
 }
@@ -625,6 +645,18 @@ list-style-type: none;
 .portfolio .buttons li b{
     font-size: 18px;
     border-radius: 50%;
+}
+.portfolio #img_group_1{
+    height: auto;
+}
+.portfolio #img_group_2{
+    height: auto;
+}
+.portfolio #img_group_3{
+    height: auto;
+}
+.portfolio #img_group_4{
+    height: auto;
 }
 .anh{
     position: relative;
