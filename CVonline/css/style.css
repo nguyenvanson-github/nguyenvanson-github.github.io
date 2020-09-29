@@ -815,10 +815,12 @@ list-style-type: none;
 .img_group{
     opacity: 0;
     visibility: hidden;
+    display: none;
 }
 .hienlen{
     opacity: 1!important;
     visibility: visible!important;
+    display: block;
 }
 .portfolio .content_img{
     position: relative;
