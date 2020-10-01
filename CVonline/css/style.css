@@ -623,40 +623,10 @@ list-style-type: none;
     overflow-y: visible;
     z-index: 9;
 }
-.portfolio .buttons{
-    /*width: 10000px;*/
-    width: 500px;
-    height: 80px;
-    background-color: #d3d9df;
-    text-align: center;
-    margin: auto;
-}
+
 .portfolio .buttons ul{
     list-style: none;
     padding: 22px;
-}
-.portfolio .buttons li{
-    text-align:center;
-    cursor:pointer ;
-    width: 80px;
-    height: 25px;
-    /*background-color: #1c7430;*/
-}
-.portfolio .buttons li b{
-    font-size: 18px;
-    border-radius: 50%;
-}
-.portfolio #img_group_1{
-    height: auto;
-}
-.portfolio #img_group_2{
-    height: auto;
-}
-.portfolio #img_group_3{
-    height: auto;
-}
-.portfolio #img_group_4{
-    height: auto;
 }
 .anh{
     position: relative;
@@ -702,7 +672,9 @@ list-style-type: none;
     opacity: 1!important;
     visibility: visible!important;
 }
-
+.btn_active{
+    background-color: #f1b0b7!important;
+}
 
 .pop-up .images_pop_up img{
     position: absolute;
@@ -1384,5 +1356,48 @@ list-style-type: none;
         transform: rotateZ(-360deg);
         opacity: 0;
         visibility:hidden ;
+    }
+}
+
+
+
+
+/* responsive */
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+.viewport-setting{
+    /*font-size: 5px;*/
+    position: fixed;
+    top: 0;
+    left: 152px;
+    height: 500px;
+    width: 90px;
+}
+    .viewport-cfg{
+        font-size: 20px;
+    }
+    .viewport_menu_left{
+        overflow-y: visible;
+        width: 30%;
+    }
+    .viewport_menu_left li{
+        font-size: 10px!important;
+    }
+    .viewport_btn1{
+        font-size: 10px!important;
+    }
+    .viewport-content-right{
+        position: absolute!important;
+        top: 0;
+        left: 0!important;
+        overflow-x: visible;
+    }
+    .viewport-name{
+        width: 30% !important;
+        font-size: 15px!important;
+        background-color: navajowhite;
+    }
+    .viewport-bg_name{
+        display: none!important;
     }
 }

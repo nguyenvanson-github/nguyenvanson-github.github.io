@@ -6,7 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <script src="libs/js/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="libs/mansory_lib/isotope.pkgd.min.js"></script>
+    <script src="libs/image_loaded/imagesloaded.pkgd.min.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -31,19 +34,19 @@
             </div>
         </div>
 
-        <div class="menu_left">
+        <div class="menu_left viewport_menu_left">
             <img src="images/me.png" alt="">
-            <div class="bg_name"></div>
-            <div class="name text-center color_change change_red">
+            <div class="bg_name viewport-bg_name"></div>
+            <div class="viewport-name name text-center color_change change_red">
                 Nguyễn Văn Sơn
             </div>
             <ul>
-                <li ><i class="icon fa fa-home" aria-hidden="true"></i><span class="btn1 change_color" data-ds="home">HOME</span></li>
-                <li ><i class="icon fa fa-user-o" aria-hidden="true"></i><span class="btn1" data-ds="About_me">ABOUT ME</span></li>
-                <li ><i class="icon fa fa-id-card-o" aria-hidden="true"></i><span class="btn1" data-ds="resume">RESUME</span></li>
-                <li ><i class="icon fa fa-briefcase" aria-hidden="true"></i><span class="btn1" data-ds="portfolio">PORTFOLIO</span></li>
-                <li ><i class="icon fa fa-book" aria-hidden="true"></i><span class="btn1" data-ds="blog">BLOG</span></li>
-                <li ><i class="icon fa fa-envelope-o" aria-hidden="true"></i><span class="btn1" data-ds="contact">CONTACT</span></li>
+                <li ><i class="icon fa fa-home" aria-hidden="true"></i><span class="viewport_btn1 btn1 change_color" data-ds="home">HOME</span></li>
+                <li ><i class="icon fa fa-id-card-o" aria-hidden="true"></i><span class="viewport_btn1 btn1" data-ds="resume">RESUME</span></li>
+                <li ><i class="icon fa fa-user-o" aria-hidden="true"></i><span class="viewport_btn1 btn1" data-ds="About_me">ABOUT ME</span></li>
+                <li ><i class="icon fa fa-briefcase" aria-hidden="true"></i><span class="viewport_btn1 btn1" data-ds="portfolio">PORTFOLIO</span></li>
+                <li ><i class="icon fa fa-book" aria-hidden="true"></i><span class="viewport_btn1 btn1" data-ds="blog">BLOG</span></li>
+                <li ><i class="icon fa fa-envelope-o" aria-hidden="true"></i><span class="viewport_btn1 btn1" data-ds="contact">CONTACT</span></li>
             </ul>
             <div class=" text-center pt-5">
                 <a class="social" href="https://www.facebook.com"><i class="face fa fa-facebook" aria-hidden="true"></i></a>
@@ -58,8 +61,8 @@
                 </p>
             </div>
         </div>
-        <div class="setting">
-            <div class="cfg">
+        <div class="setting viewport-setting">
+            <div class="viewport-cfg cfg">
                 <i class="fa fa-cog color_change" id="cfg" aria-hidden="true"></i>
             </div>
             <h4 class="text-center mt-0 pt-0">Page animation</h4>
@@ -87,7 +90,7 @@
                 <div class="color orange float-left" data-color="change_orange"></div>
             </div>
         </div>
-        <div class="content-right pl-5 ml-5">
+        <div class="content-right viewport-content-right pl-5 ml-5">
             <div class="page home active" page-number="1" id="home">
                 <h1>Nguyen Van <span class="first_name change_red color_change">Son</span></h1>
                 <div class="introduce">
@@ -325,239 +328,36 @@
             <div class="portfolio page" page-number="4" id="portfolio">
                 <div class="buttons mt-5">
                     <ul class="text-center mt-3">
-                        <li class="btn_select change_bg color_change change_red" data-img="img_group_1"><b>ALL</b></li>
-                        <li class="btn_select color_change change_red" data-img="img_group_2"><b>BRAND</b></li>
-                        <li class="btn_select color_change change_red" data-img="img_group_3"><b>DESIGN</b></li>
-                        <li class="btn_select color_change change_red" data-img="img_group_4"><b>GRAPHIC</b></li>
+                        <li class="btn btn-success btn_select color_change change_red" data-img="*"><b>ALL</b></li>
+                        <li class="btn btn-success btn_select color_change change_red" data-img=".brand"><b>BRAND</b></li>
+                        <li class="btn btn-success btn_select color_change change_red" data-img=".design"><b>DESIGN</b></li>
+                        <li class="btn btn-success btn_select color_change change_red" data-img=".graphic"><b>GRAPHIC</b></li>
                     </ul>
                 </div>
                 <div class="content_img">
-                    <ul>
-                        <li class="img_group hienlen" id="img_group_1">
-                            <div class="black_bg"></div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-1.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh1">
-                                    <p class="p1 ">Book Design</p>
-                                    <p class="p2 mt-3 ">Graphic</p>
-                                    <i class=" fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-2.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh2">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-3.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh3">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-4.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh4">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-5.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh5">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-6.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh6">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-7.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh7">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-8.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh8">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-9.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh9">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-10.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh10">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-11.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh11">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="img_group hienlen" id="img_group_2">
-                            <div class="black_bg">
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-1.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh1">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-5.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh5">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-8.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh8">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-9.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh9">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-11.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh11">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="img_group hienlen" id="img_group_3">
-                            <div class="black_bg">
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-2.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh2">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-3.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh3">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-4.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh4">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="anh float-left">
-                                <div class="img1">
-                                    <img class="imgs" src="images/img-6.jpg" alt="">
-                                </div>
-                                <div class="xanh" data-images="anh6">
-                                    <p class="p1">Book Design</p>
-                                    <p class="p2 mt-3">Graphic</p>
-                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="img_group hienlen" id="img_group_4">
-                        <div class="black_bg">
-                        </div>
-                        <div class="anh float-left">
+                    <div class="images">
+                        <div class="black_bg "></div>
+                        <div class="anh float-left brand graphic">
                             <div class="img1">
                                 <img class="imgs" src="images/img-1.jpg" alt="">
                             </div>
                             <div class="xanh" data-images="anh1">
+                                <p class="p1 ">Book Design</p>
+                                <p class="p2 mt-3 ">Graphic</p>
+                                <i class=" fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left design">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-2.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh2">
                                 <p class="p1">Book Design</p>
                                 <p class="p2 mt-3">Graphic</p>
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="anh float-left">
+                        <div class="anh float-left design graphic">
                             <div class="img1">
                                 <img class="imgs" src="images/img-3.jpg" alt="">
                             </div>
@@ -567,7 +367,37 @@
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="anh float-left">
+                        <div class="anh float-left design">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-4.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh4">
+                                <p class="p1">Book Design</p>
+                                <p class="p2 mt-3">Graphic</p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left brand">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-5.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh5">
+                                <p class="p1">Book Design</p>
+                                <p class="p2 mt-3">Graphic</p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left design">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-6.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh6">
+                                <p class="p1">Book Design</p>
+                                <p class="p2 mt-3">Graphic</p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left graphic">
                             <div class="img1">
                                 <img class="imgs" src="images/img-7.jpg" alt="">
                             </div>
@@ -577,7 +407,27 @@
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="anh float-left">
+                        <div class="anh float-left brand">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-8.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh8">
+                                <p class="p1">Book Design</p>
+                                <p class="p2 mt-3">Graphic</p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left brand">
+                            <div class="img1">
+                                <img class="imgs" src="images/img-9.jpg" alt="">
+                            </div>
+                            <div class="xanh" data-images="anh9">
+                                <p class="p1">Book Design</p>
+                                <p class="p2 mt-3">Graphic</p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="anh float-left graphic">
                             <div class="img1">
                                 <img class="imgs" src="images/img-10.jpg" alt="">
                             </div>
@@ -587,7 +437,7 @@
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="anh float-left">
+                        <div class="anh float-left brand graphic">
                             <div class="img1">
                                 <img class="imgs" src="images/img-11.jpg" alt="">
                             </div>
@@ -597,8 +447,7 @@
                                 <i class="fa fa-picture-o" aria-hidden="true"></i>
                             </div>
                         </div>
-                    </li>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="blog page" page-number="5" id="blog">

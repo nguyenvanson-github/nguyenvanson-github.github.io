@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",function (){
 var btn=document.querySelectorAll('.btn1');
-var btn_select=document.querySelectorAll('.btn_select');
 var page=document.querySelectorAll('.page');
 var cmt=document.querySelectorAll('.cmt');
 var arrange=document.querySelectorAll('.arrange');
@@ -18,6 +17,7 @@ var index=0;
 var k=0;
 var n=0;
 var home=document.getElementById('home');
+console.log($('.images_pop_up img'));
 console.log(home.getAttribute('page-number'));
     for (var x=0;x<xanh.length;x++){
         xanh[x].onclick=function (){
@@ -34,18 +34,6 @@ console.log(home.getAttribute('page-number'));
         }
     }
 
-    for(var b=0;b<btn_select.length;b++){
-        btn_select[b].onclick=function (){
-            for (var c=0;c<btn_select.length;c++){
-                btn_select[c].classList.remove('change_bg');
-                group[c].classList.remove('hienlen');
-            }
-            this.classList.add('change_bg');
-            var data=this.getAttribute('data-img');
-            var group_img=document.getElementById(data);
-            group_img.classList.add('hienlen');
-        }
-    }
     cfg.onclick=function (){
         n++;
         if(n%2==0) {
@@ -195,4 +183,23 @@ console.log(home.getAttribute('page-number'));
             blue[a].classList.add('go');
         }
     },3000)
+    // hiệu ứng masonry trang portfolio
+    // init Isotope
+    var $grid =     $('.images').isotope({
+        // options
+        itemSelector: '.anh',
+        layoutMode: 'masonry'
+    });
+// layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
+    $('.portfolio .buttons ul li').click(function (){
+        $('.portfolio .buttons ul li').removeClass('btn_active');
+        $(this).addClass('btn_active');
+        tendanhmuc=$(this).attr('data-img');
+        $grid.isotope({ filter: tendanhmuc });
+        console.log(tendanhmuc);
+        return false;
+    })
 },false)
